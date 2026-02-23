@@ -1,5 +1,5 @@
 import flet as ft
-
+#CALCULADORA CÓDIGO TIRADO DA DOCUMENTAÇÃO OFICIAL DO FLET: https://flet.dev/docs/controls/button/
 
 def main(page: ft.Page):
     page.title = "Calc App"
