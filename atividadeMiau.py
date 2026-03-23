@@ -3,7 +3,7 @@ import flet as ft
 def main(page: ft.Page):
     def mostrar(e):
         page.add(
-            ft.Text("Miau!prrrrrr..."),
+            ft.Text("Minha gata subiu na prateleira e quebrou a miniatura"),
              ft.Image(
                 src='images/gato.jpg',
                 height=120
@@ -17,7 +17,7 @@ def main(page: ft.Page):
                 height=120
             ),
             ft.Button(
-                content='Clique aqui para eu ronronar!',
+                content='Clique para ver oq eu aprontei!',
                 on_click=mostrar
             )
         )
