@@ -20,7 +20,7 @@ def main(page: ft.Page):
                 controls=[
                     ft.Text("Gandalf", size=24,
                             weight="bold", color="white"),
-                    ft.Text("Nível 42 - Ninja das Sombras",
+                    ft.Text("Nível 42 - O mago Cinzento",
                             size=24, color="grey300"),
                 ], spacing=2
             )
