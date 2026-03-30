@@ -12,7 +12,8 @@ def main(page: ft.Page):
 
     # Cabeçalho:Avatar(emoji) e nome do lado
 
-cabecalho = ft.Row(
+
+    cabecalho = ft.Row(
         controls=[
             ft.Text("🧙‍♂️", size=60),  # emoji a prova de erros
             ft.Column(
@@ -30,7 +31,7 @@ cabecalho = ft.Row(
 
     # status: Barra de hp, mp e xp
 
-status_bar = ft.Row(
+    status_bar = ft.Row(
         controls=[
             ft.Container(
                 content=ft.Text(
@@ -47,40 +48,41 @@ status_bar = ft.Row(
     )
 
 
-# botoes : ações do jogador
-botoes_acao = ft.Row(
-    controls=[
-        ft.Button(
-            content="Adicionar Amigo",
-            bgcolor="#36628e",
-            color="white",
+    # botoes : ações do jogador
+    botoes_acao = ft.Row(
+        controls=[
+            ft.Button(
+                content="Adicionar Amigo",
+                bgcolor="#36628e",
+                color="white",
+            ),
+            ft.Button(
+                content="Olá pequenos Hobbits",
+                bgcolor="red",
+                color="white"
+            ),
+        ],
+        alignment=ft.MainAxisAlignment.CENTER,
+        spacing=20
+    )
+
+
+    # cartão principal
+
+    cartao = ft.Container(
+        content=ft.Column(
+            controls=[cabecalho, status_bar, botoes_acao],
+            spacing=30
         ),
-        ft.Button(
-            content="O que quer dizer? Está me desejando um bom dia, ou quer dizer que o dia está bom, não importa o que eu queira ou não? Ou talvez queira dizer que você se sente bem neste dia em particular? Ou está simplesmente dizendo que este é um dia para estar bem?",
-            bgcolor="red",
-            color="white"
-        ),
-    ],
-    alignment=ft.MainAxisAlignment.CENTER,
-    spacing=20
-)
 
+        bgcolor="#2e2e2e",
+        padding=40,
+        border_radius=15,
+        width=450,
+        # aqui vai ser um efeito da sombra ok
+        shadow=ft.BoxShadow(blur_radius=20, color="black")
+    )
 
-# cartão principal
-cartao = ft.Container(
-     content=ft.Column(
-        controls=[cabecalho, status_bar, botoes_acao],
-          spacing=30
-    ),
-    bgcolor="#2e2e2e",
-    padding=40,
-    border_radius=15,
-    width=450,
-    # aqui vai ser um efeito da sombra ok
-    shadow=ft.BoxShadow(blur_radius=20, color="black")
-)
-
-
-page.add(cartao)
+    page.add(cartao)
 
 ft.run(main)
